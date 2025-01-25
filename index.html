@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="قناة يوتيوب الخاصة بـ Mechaoui، قناة ماين كرافتية مليئة بالتحديات والمغامرات.">
+    <title>قناتي على يوتيوب - Mechaoui</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>قناتي على يوتيوب</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="showSection('about')">نبذة عن القناة</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('videos')">الفيديوهات</a></li>
+                <li><a href="https://www.youtube.com/@mechaoui" target="_blank" class="youtube-link">
+                    <img src="https://yt3.googleusercontent.com/vKMm_ClwRmepaTc3BWhlb6aXjUmhk7BLwvGkg9cCWjPIX51bD0FnkbViTwS8RNdAshaUk7SwwKw=s900-c-k-c0x00ffffff-no-rj" alt="Mechaoui Channel" class="youtube-img">
+                    اشترك في القناة
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- قسم نبذة عن القناة -->
+    <section id="about" class="section">
+        <div class="section-content">
+            <h2>نبذة عن قناتي</h2>
+            <div class="about-content">
+                <img src="https://www.minecraft.net/content/dam/minecraft/pmp/mc-logo.png" alt="ماين كرافت" class="about-img">
+                <p class="about-text">
+                    قناة Mechaoui هي قناة مخصصة لعشاق لعبة ماين كرافت! إذا كنت من محبي التحديات، البناء، والاستكشاف في عالم ماين كرافت، فهذه القناة هي المكان المثالي لك. نقدم في القناة مغامرات ممتعة، تحديات جديدة، وأفكار مبتكرة للبناء.
+                    <br><br>
+                    كل فيديو نقدمه مليء بالمغامرة والمتعة، حيث نأخذكم في رحلات عبر عوالم ماين كرافت ونكتشف سوياً أسرار اللعبة. انضم إلى قناتنا الآن وكن جزءاً من هذه المغامرة الشيقة!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تسجيل الدخول -->
+    <section id="login" class="section">
+        <div class="section-content">
+            <h2>تسجيل الدخول لمشاهدة الفيديوهات</h2>
+            <form id="login-form">
+                <label for="username">اسم المستخدم:</label>
+                <input type="text" id="username" placeholder="أدخل اسم المستخدم" required>
+
+                <label for="password">كلمة المرور:</label>
+                <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+
+                <button type="submit">تسجيل الدخول</button>
+            </form>
+            <p id="login-error" class="error-message"></p>
+        </div>
+    </section>
+
+    <!-- قسم الفيديوهات -->
+    <section id="videos" class="section" style="display: none;">
+        <div class="section-content">
+            <h2>أحدث الفيديوهات</h2>
+            <!-- الفيديوهات مع وصف -->
+            <div class="video-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/sCRr2nyEvKU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-description">
+                    <h3>فيديو 1: تجربة جديدة في ماين كرافت</h3>
+                    <p>في هذا الفيديو، أستعرض مغامرة جديدة في عالم ماين كرافت، حيث أواجه تحديات جديدة وأبني معسكرًا ضخمًا. لا تفوتوا التجربة!</p>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/C9dHrAqamjI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-description">
+                    <h3>فيديو 2: بناء قلعة ماين كرافت</h3>
+                    <p>استمتعوا بمشاهدتي وأنا أبدأ في بناء قلعة ضخمة في عالم ماين كرافت! تابعوا جميع الخطوات والتفاصيل في هذا الفيديو المثير.</p>
+                </div>
+            </div>
+            <!-- يمكن إضافة المزيد من الفيديوهات هنا -->
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

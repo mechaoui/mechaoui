@@ -1,0 +1,55 @@
+// script.js
+
+// إعدادات الوضع الداكن والفاتح مع حفظ الوضع في localStorage
+const toggleDarkModeButton = document.getElementById('toggle-dark-mode');
+const storedDarkMode = localStorage.getItem('dark-mode') === 'true';
+
+// تفعيل الوضع الداكن عند تحميل الصفحة بناءً على القيمة المخزنة
+if (storedDarkMode) {
+  document.body.classList.add('dark-mode');
+}
+
+// تفعيل/إيقاف الوضع الداكن عند النقر على الزر
+toggleDarkModeButton.addEventListener('click', () => {
+  const isDarkMode = document.body.classList.toggle('dark-mode');
+  localStorage.setItem('dark-mode', isDarkMode);
+});
+
+// وظيفة التنقل بين الأقسام
+const navLinks = document.querySelectorAll('.bottom-nav a');
+const sections = document.querySelectorAll('.section');
+
+// إخفاء جميع الأقسام
+function hideSections() {
+  sections.forEach(section => {
+    section.classList.remove('active');
+  });
+}
+
+// إضافة وظيفة للنقر على الرابط
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // إخفاء جميع الأقسام
+    hideSections();
+
+    // تحديد القسم المستهدف بناءً على الرابط الذي تم النقر عليه
+    const targetSection = document.querySelector(`#${link.dataset.target}`);
+
+    // إظهار القسم المستهدف
+    targetSection.classList.add('active');
+
+    // تحديث الرابط النشط
+    navLinks.forEach(navLink => navLink.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+
+// إضافة انتقالات سلسة عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', () => {
+  const initialActiveLink = document.querySelector('.bottom-nav a.active');
+  const initialTargetSection = document.querySelector(`#${initialActiveLink.dataset.target}`);
+  hideSections();
+  initialTargetSection.classList.add('active');
+});
